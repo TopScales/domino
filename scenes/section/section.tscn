@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnmoiivw7nsyc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qtx73"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.3066154, 0.31726107, 0.3850188, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxn4h"]
+content_margin_left = 32.0
+content_margin_top = 8.0
+bg_color = Color(0.36769566, 0.38097945, 0.45582604, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[node name="Section" type="PanelContainer"]
+custom_minimum_size = Vector2(200, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qtx73")
+
+[node name="Box" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TitleLabel" type="Label" parent="Box"]
+layout_mode = 2
+size_flags_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_wxn4h")
+text = "Title"
+
+[node name="HSeparator" type="HSeparator" parent="Box"]
+layout_mode = 2

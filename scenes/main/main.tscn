@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://eurw3j3uv84f"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vom5j"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hyk8p"]
+bg_color = Color(0.22670749, 0.22670752, 0.2267074, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iuonh"]
+bg_color = Color(0.3515629, 0.35156292, 0.35156274, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuBar" type="MenuBar" parent="MainContainer"]
+layout_mode = 2
+
+[node name="File" type="PopupMenu" parent="MainContainer/MenuBar"]
+title = "File"
+item_count = 1
+item_0/text = "Save"
+item_0/id = 0
+
+[node name="About" type="PopupMenu" parent="MainContainer/MenuBar"]
+title = "About"
+item_count = 1
+item_0/text = "Save"
+item_0/id = 0
+
+[node name="DocksContainer" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftDock" type="VBoxContainer" parent="MainContainer/DocksContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MainContainer/DocksContainer/LeftDock"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vom5j")
+
+[node name="Section" type="VBoxContainer" parent="MainContainer/DocksContainer/LeftDock/PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="AtlasDockLabel" type="Label" parent="MainContainer/DocksContainer/LeftDock/PanelContainer/Section"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_hyk8p")
+text = "Atlas Collection"
+
+[node name="AtlasPanel" type="PanelContainer" parent="MainContainer/DocksContainer/LeftDock/PanelContainer/Section"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_iuonh")

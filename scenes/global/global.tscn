@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4k8jrw55a2qh"]
+
+[ext_resource type="Script" uid="uid://dl5efplsswxec" path="res://scenes/global/global.gd" id="1_bhh4k"]
+[ext_resource type="Script" uid="uid://ddu6halqprqi0" path="res://scenes/global/settings.gd" id="2_pht4f"]
+
+[node name="Global" type="Node"]
+script = ExtResource("1_bhh4k")
+
+[node name="Settings" type="Node" parent="."]
+script = ExtResource("2_pht4f")
+metadata/_custom_type_script = "uid://ddu6halqprqi0"

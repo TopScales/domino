@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Version" load_steps=2 format=3 uid="uid://byrkto7emeau7"]
+
+[ext_resource type="Script" uid="uid://j8bsng56mbgp" path="res://scenes/global/version.gd" id="1_qlspv"]
+
+[resource]
+script = ExtResource("1_qlspv")
+minor = 1
+patch = 1
+status = "pre-alpha"
+nickname = "Scaffolding"
+metadata/_custom_type_script = "uid://j8bsng56mbgp"
