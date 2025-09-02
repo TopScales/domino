@@ -1,0 +1,3 @@
+[submodule "godot/godot_source"]
+	path = godot/godot_source
+	url = git@github.com:TopScales/godot.git
